@@ -1,4 +1,4 @@
-export interface IShowsearch {
+export interface IShowSearch {
   name: string,
   summary: string,
   network: string,

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IShowsearch } from '../ishowsearch';
+import { IShowSearch } from '../ishowsearch';
 
 @Component({
   selector: 'app-show-search',
@@ -7,7 +7,7 @@ import { IShowsearch } from '../ishowsearch';
   styleUrl: './show-search.component.css'
 })
 export class ShowSearchComponent {
-  current: IShowsearch = {
+  current: IShowSearch = {
     name: 'Friends',
     summary: 'Show about friends',
     network: 'NBC',
