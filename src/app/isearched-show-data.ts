@@ -3,18 +3,18 @@
 export interface ISearchedShowData {
   name:string,
   summary:string,
-  network:[{
+  network:{
     name:string
-  }],
-  image:[{
+  },
+  image:{
     medium:string
-  }],
-  rating:[{
+  },
+  rating:{
     average:number
-  }],
-  genres:[{
-    0:string
-  }],
+  },
+  genres:[
+    string
+  ],
   premiered:string
 
 }

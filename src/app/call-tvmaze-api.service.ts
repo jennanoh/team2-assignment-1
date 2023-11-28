@@ -17,6 +17,16 @@ export class CallTvmazeApiService {
   }
 
   private transformToIShowSearch(data:ISearchedShowData): IShowSearch {
+    return {
+      name: data.name,
+      summary: data.summary,
+      network: data.network.name,
+      image: data.image.medium,
+      rating: data.rating.average,
+      genre: data.genres[0],
+      date: data.premiered
+      
+    } 
 
 }
 }
