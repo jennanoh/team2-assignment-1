@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IShowSearch } from '../ishowsearch';
+import { CallTvmazeApiService } from '../call-tvmaze-api.service'
 
 @Component({
   selector: 'app-show-search',
@@ -8,12 +9,17 @@ import { IShowSearch } from '../ishowsearch';
 })
 export class ShowSearchComponent {
   current: IShowSearch = {
-    name: 'Friends',
-    summary: 'Show about friends',
-    network: 'NBC',
-    image: ' ',
-    rating: 8.9,
-    genre: 'Comedy',
-    date: '1994-09-22',
+    name: '',
+    summary: '',
+    network: '',
+    image: '',
+    rating: ,
+    genre: '',
+    date: '',
   }
+  constructor(private callTvmazeApiService: CallTvmazeApiService){
+    this.callTvmazeApiService.getSearchedShow('Girls').subscribe(data => this.current = data)}
+  
 }
+
+

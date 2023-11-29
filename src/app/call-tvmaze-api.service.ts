@@ -2,6 +2,7 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {map} from 'rxjs/operators';
 import { ISearchedShowData } from './isearched-show-data';
 import { IShowSearch } from './ishowsearch';
 
@@ -13,7 +14,14 @@ export class CallTvmazeApiService {
   constructor(private httpClient: HttpClient) { }
 
   getSearchedShow(name:string){
-    this.httpClient.get<ISearchedShowData>(`https://api.tvmaze.com/singlesearch/shows?q=${name}}`)
+
+    return
+    
+    this.httpClient.get<ISearchedShowData>(`https://api.tvmaze.com/singlesearch/shows?q=${name}}`).pipe(
+
+      map(data => this.transformToIShowSearch(data))
+
+    )
   }
 
   private transformToIShowSearch(data:ISearchedShowData): IShowSearch {
