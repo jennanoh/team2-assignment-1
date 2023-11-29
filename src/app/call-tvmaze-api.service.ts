@@ -15,9 +15,7 @@ export class CallTvmazeApiService {
 
   getSearchedShow(name:string){
 
-    return
-    
-    this.httpClient.get<ISearchedShowData>(`https://api.tvmaze.com/singlesearch/shows?q=${name}}`).pipe(
+    return this.httpClient.get<ISearchedShowData>(`https://api.tvmaze.com/singlesearch/shows?q=${name}}`).pipe(
 
       map(data => this.transformToIShowSearch(data))
 

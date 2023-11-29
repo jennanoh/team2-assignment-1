@@ -13,12 +13,12 @@ export class ShowSearchComponent {
     summary: '',
     network: '',
     image: '',
-    rating: ,
+    rating: 0,
     genre: '',
     date: '',
   }
   constructor(private callTvmazeApiService: CallTvmazeApiService){
-    this.callTvmazeApiService.getSearchedShow('Girls').subscribe(data => this.current = data)}
+    this.callTvmazeApiService.getSearchedShow('Girls').subscribe((data:IShowSearch) => this.current = data)}
   
 }
 
