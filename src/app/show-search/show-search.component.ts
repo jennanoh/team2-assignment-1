@@ -21,5 +21,3 @@ export class ShowSearchComponent {
     this.callTvmazeApiService.getSearchedShow('Girls').subscribe((data:IShowSearch) => this.current = data)}
   
 }
-
-
