@@ -4,10 +4,11 @@
     <p>Search your favourite TV shows now!</p>
   </div>
   <div>
-  <app-search-tool></app-search-tool>
+  <!--take the searchEvent event data and put it through the doSearch function-->
+  <app-search-tool (searchEvent)="doSearch($event)"></app-search-tool>
   </div>
   <h2>Show name here</h2>
   <mat-card style="max-width: 400px; margin-left: 250px; margin-top:50px;">
-  <app-show-search></app-show-search>
+  <app-show-search [current]="currentShow"></app-show-search>
   </mat-card>
 </div>

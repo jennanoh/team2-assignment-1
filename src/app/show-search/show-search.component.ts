@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IShowSearch } from '../ishowsearch';
-import { CallTvmazeApiService } from '../call-tvmaze-api.service'
+
 
 @Component({
   selector: 'app-show-search',
@@ -8,7 +8,8 @@ import { CallTvmazeApiService } from '../call-tvmaze-api.service'
   styleUrl: './show-search.component.css'
 })
 export class ShowSearchComponent {
-  current: IShowSearch = {
+  //app component will input data to current variable
+  @Input() current: IShowSearch = {
     name: '',
     summary: '',
     network: '',
@@ -17,7 +18,4 @@ export class ShowSearchComponent {
     genre: '',
     date: '',
   }
-  constructor(private callTvmazeApiService: CallTvmazeApiService){
-    this.callTvmazeApiService.getSearchedShow('Girls').subscribe((data:IShowSearch) => this.current = data)}
-  
 }
