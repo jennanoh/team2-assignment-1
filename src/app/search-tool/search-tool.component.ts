@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
 
@@ -8,6 +8,8 @@ import {debounceTime} from 'rxjs/operators';
   styleUrl: './search-tool.component.css'
 })
 export class SearchToolComponent {
+  //output any valid event in the search bar to the parent app component
+  @Output() searchEvent = new EventEmitter<string>();
   search = new FormControl('', [Validators.minLength(3)])
 
 constructor(){
@@ -15,9 +17,8 @@ constructor(){
   .pipe(debounceTime(1000))
   .subscribe(searchValue => {
     if (this.search.valid)
-    console.log(searchValue)
+    this.searchEvent.emit(searchValue??undefined)})
   }
-  )}
-  }
+}
 
 
