@@ -1,11 +1,15 @@
-<div>
+<div *ngIf="current.summary === ''">
+  No data availble
+</div>
+<div *ngIf="current.summary !== ''">
   <div>
     <span>{{current.name}}, {{current.rating}}</span>
   </div>
   <div>
-    <span>{{current.network}},{{current.genre}}</span>
+    <span>{{current.genre}}</span>
   <br />
     <span>{{current.date}}</span>
   </div>
   <div>{{current.summary}}</div>
 </div>
+
