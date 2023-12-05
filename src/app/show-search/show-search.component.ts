@@ -12,7 +12,6 @@ export class ShowSearchComponent {
   @Input() current: IShowSearch = {
     name: '',
     summary: '',
-    network: '',
     image: '',
     rating: 0,
     genre: '',

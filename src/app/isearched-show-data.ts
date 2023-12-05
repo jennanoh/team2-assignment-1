@@ -3,9 +3,6 @@
 export interface ISearchedShowData {
   name:string,
   summary:string,
-  network:{
-    name:string
-  },
   image:{
     medium:string
   },

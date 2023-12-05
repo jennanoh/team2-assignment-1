@@ -12,7 +12,6 @@ export class AppComponent {
   currentShow: IShowSearch = {
     name: '',
     summary: '',
-    network: '',
     image: '',
     rating: 0,
     genre: '',
