@@ -35,13 +35,10 @@
               "src/assets"
             ],
             "styles": [
-              
-              "src/styles.css",
-              "bootswatch/dist/lux/bootstrap.min.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
-            "scripts": [
-              "bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -104,13 +101,10 @@
               "src/assets"
             ],
             "styles": [
-
-              "src/styles.css",
-              "bootswatch/dist/lux/bootstrap.min.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
-            "scripts": [
-              "bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           }
         }
       }

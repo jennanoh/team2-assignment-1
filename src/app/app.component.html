@@ -1,29 +1,13 @@
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">TV Shows</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <form class="d-flex">
-        <div>
-          <!--take the searchEvent event data and put it through the doSearch function-->
-          <app-search-tool (searchEvent)="doSearch($event)"></app-search-tool>
-          </div>
-      </form>
-      </div>
-
-
-  </div>
-</nav>
-<div style="text-align:left;">
+<div style="text-align:center;">
+  <mat-toolbar color="primary"> TV shows </mat-toolbar>
   <div>
     <p>Search your favourite TV shows now!</p>
   </div>
-
-  <P></P>
-  <P></P>
+  <div>
+  <!--take the searchEvent event data and put it through the doSearch function-->
+  <app-search-tool (searchEvent)="doSearch($event)"></app-search-tool>
+  </div>
+  <h2>Show name here</h2>
   <mat-card style="max-width: 400px; margin-left: 250px; margin-top:50px;">
   <app-show-search [current]="currentShow"></app-show-search>
   </mat-card>
