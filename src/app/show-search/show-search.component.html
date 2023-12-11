@@ -8,7 +8,8 @@
       <h4 class="card-title">{{current.name}}</h4>
       <h6 class="card-subtitle text-muted">Average Rating: {{current.rating}}</h6>
     <p class="card-text">Date Released: {{current.date}}</p>
-    <p class="card-text">{{current.summary}}</p>
+    <img [src]="current.image" />
+    <span>{{current.summary}}</span>
   </div>
 </div>
 
