@@ -1,15 +1,52 @@
+.navbar-brand{
+  margin-left: 150px;
 
+}
 .instructions{
   text-align:left; 
   margin-left:150px;
   padding-top:10px;
 }
 .maincard{
-  max-width: 800px;
-  margin-top:50px;
+  margin:50px 150px 200px 0px;
   background-color: #1a1a1a;
   padding: 25px;
   color: white;
-
+}
+.search-bar{
+  margin-right:150px;
 }
 
+
+/******Small devices******/
+@media (min-width:768px) and (max-width:991px){
+  .navbar-brand{
+    margin-left:100px;
+  }
+  .instructions{
+    margin-left:100px;
+ }
+ .maincard{
+    margin-right:100px;
+ }
+ .search-bar{
+  margin-right:100px;
+}
+}
+
+/******Extra small devices******/
+@media (max-width:767px){
+  .navbar-brand{
+    margin-left:50px;
+  }
+  .instructions{
+    margin-left:50px;
+ }
+  .maincard{
+    margin-right:50px;
+ }
+ .search-bar{
+  margin-right:50px;
+  margin-left:50px;
+}
+}
