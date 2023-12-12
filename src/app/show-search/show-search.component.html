@@ -2,14 +2,19 @@
   No data availble
 </div>
 <div *ngIf="current.summary !== ''">
-  <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-    <div class="card-header">{{current.genre}}</div>
+  <div>
+    <h4 class="card-title">{{current.name}}</h4>
     <div class="card-body">
-      <h4 class="card-title">{{current.name}}</h4>
-      <h6 class="card-subtitle text-muted">Average Rating: {{current.rating}}</h6>
+      <div class="card-header">{{current.genre}}</div>
+      <h6 class="card-subtitle">Average Rating: {{current.rating}}</h6>
     <p class="card-text">Date Released: {{current.date}}</p>
-    <img [src]="current.image" />
-    <span>{{current.summary}}</span>
+    <div class="container">
+      <div>
+        <img [src]="current.image"/>
+      </div>
+      <div class="summary">
+        <p>{{current.summary}}</p>
+      </div>
+    </div>
   </div>
 </div>
-

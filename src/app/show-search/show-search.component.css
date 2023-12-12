@@ -1,0 +1,12 @@
+.container{
+  display:flex;
+  align-items: center;
+  padding: 0px;
+}
+.card-title{
+  font-size: 1.8em;
+}
+
+.summary{
+ padding-left: 30px;
+}
