@@ -1,7 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {debounceTime} from 'rxjs/operators';
-import { ShowSearchComponent } from '../show-search/show-search.component';
 
 @Component({
   selector: 'app-search-tool',
