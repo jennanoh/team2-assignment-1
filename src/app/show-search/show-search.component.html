@@ -12,8 +12,8 @@
       <div>
         <img [src]="current.image"/>
       </div>
-      <div class="summary">
-        <p>{{current.summary}}</p>
+      <div class="card-body">
+        <p class="card-text" [innerHTML]="current.summary"></p>
       </div>
     </div>
   </div>
