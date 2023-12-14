@@ -23,6 +23,10 @@ export class AppComponent {
 //constructor will call the service right away
 //solution: call the service within the doSearch function which is only triggered by a search event
 doSearch(searchValue:string){
-    this.callTvmazeApiService.getSearchedShow(searchValue).subscribe((data:IShowSearch) => this.currentShow = data)
+    this.callTvmazeApiService
+      .getSearchedShow(searchValue)
+      .subscribe((data: IShowSearch) => (
+        this.currentShow = data
+      ));
 }
 }
