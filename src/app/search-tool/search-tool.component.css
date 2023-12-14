@@ -1,0 +1,11 @@
+
+  input {
+    margin-top: 15px;
+  }
+
+  mat-hint{
+    line-height: 1.25;
+  }
+  mat-error{
+    line-height: 1.25;
+  }
