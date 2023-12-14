@@ -20,8 +20,6 @@ constructor(){
         if (this.search.value !== ''){
           this.searchEvent.emit(searchValue??undefined)
         }
-        
-        //TODO else set current [from showSearch component ] to blank. Setting it to blank allows the "data unavailable" text to display correctly. There might be other places to fix this issue, but here is one place. 
       }
     })
   }
